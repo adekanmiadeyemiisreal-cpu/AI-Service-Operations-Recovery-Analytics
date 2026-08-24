@@ -1,4 +1,4 @@
-# AI Service Operations & Recovery Analytics
+﻿# AI Service Operations & Recovery Analytics
 
 ## An End-to-End Service Operations Risk Intelligence & Recovery Analytics Platform
 
@@ -71,7 +71,17 @@ The project was designed to:
 - Create reproducible SQL and Python analytical workflows
 
 ---
+$readme = Get-Content ".\README.md" -Raw
+$insert = @"
+# Dashboard Preview
 
+### Executive Service Operations Dashboard
+
+![AI Service Operations & Recovery Analytics Dashboard](docs/screenshots/dashboard_page1.png)
+
+---
+
+"@
 # Key Project KPIs
 
 | KPI | Result |
@@ -227,10 +237,10 @@ This produces four combined risk groups:
 
 | Risk Group |
 |---|
-| Standard — Neither |
-| Elevated — Complexity Only |
-| Elevated — Symptom Only |
-| High — Complexity + Symptom |
+| Standard â€” Neither |
+| Elevated â€” Complexity Only |
+| Elevated â€” Symptom Only |
+| High â€” Complexity + Symptom |
 
 The highest-risk group represents incidents where both symptom-associated risk and operational complexity are elevated.
 
@@ -329,7 +339,7 @@ The project translates risk intelligence into operational recovery recommendatio
 
 The recommendation layer connects:
 
-**Combined Risk → Incident Volume → Prolonged Resolution Rate → Recommended Recovery Action**
+**Combined Risk â†’ Incident Volume â†’ Prolonged Resolution Rate â†’ Recommended Recovery Action**
 
 The recovery recommendation summary contains:
 
@@ -480,73 +490,73 @@ Evaluates the machine-learning models and reports:
 
 ```text
 AI Service Operations & Recovery Analytics
-│
-├── data/
-│   ├── powerbi/
-│   └── processed/
-│
-├── powerbi/
-│   └── AI Service Operations & Recovery Analytics.pbix
-│
-├── sql/
-│   ├── schema/
-│   │   ├── 01_create_tables.sql
-│   │   └── 02_align_schema.sql
-│   │
-│   └── analysis/
-│       ├── 01_incident_lifecycle.sql
-│       ├── 02_state_transition_analysis.sql
-│       ├── 03_incident_complexity.sql
-│       ├── 04_complexity_summary.sql
-│       ├── 05_resolution_outcome.sql
-│       ├── 06_incident_risk_features.sql
-│       ├── 07_risk_baseline_evaluation.sql
-│       ├── 08_symptom_risk_profile.sql
-│       ├── 09_symptom_risk_score.sql
-│       ├── 10_incident_symptom_features.sql
-│       ├── 11_combined_risk_intelligence.sql
-│       ├── 12_service_recovery_recommendations.sql
-│       ├── 13_recovery_recommendation_summary.sql
-│       └── 14_powerbi_exports.sql
-│
-├── src/
-│   ├── etl/
-│   │   ├── build_incident_dataset.py
-│   │   └── load_postgres.py
-│   │
-│   └── modeling/
-│       ├── evaluate_risk_model.py
-│       └── risk_model.py
-│
-├── app/
-├── docs/
-├── notebooks/
-├── .gitignore
-└── README.md
+â”‚
+â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ powerbi/
+â”‚   â””â”€â”€ processed/
+â”‚
+â”œâ”€â”€ powerbi/
+â”‚   â””â”€â”€ AI Service Operations & Recovery Analytics.pbix
+â”‚
+â”œâ”€â”€ sql/
+â”‚   â”œâ”€â”€ schema/
+â”‚   â”‚   â”œâ”€â”€ 01_create_tables.sql
+â”‚   â”‚   â””â”€â”€ 02_align_schema.sql
+â”‚   â”‚
+â”‚   â””â”€â”€ analysis/
+â”‚       â”œâ”€â”€ 01_incident_lifecycle.sql
+â”‚       â”œâ”€â”€ 02_state_transition_analysis.sql
+â”‚       â”œâ”€â”€ 03_incident_complexity.sql
+â”‚       â”œâ”€â”€ 04_complexity_summary.sql
+â”‚       â”œâ”€â”€ 05_resolution_outcome.sql
+â”‚       â”œâ”€â”€ 06_incident_risk_features.sql
+â”‚       â”œâ”€â”€ 07_risk_baseline_evaluation.sql
+â”‚       â”œâ”€â”€ 08_symptom_risk_profile.sql
+â”‚       â”œâ”€â”€ 09_symptom_risk_score.sql
+â”‚       â”œâ”€â”€ 10_incident_symptom_features.sql
+â”‚       â”œâ”€â”€ 11_combined_risk_intelligence.sql
+â”‚       â”œâ”€â”€ 12_service_recovery_recommendations.sql
+â”‚       â”œâ”€â”€ 13_recovery_recommendation_summary.sql
+â”‚       â””â”€â”€ 14_powerbi_exports.sql
+â”‚
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ etl/
+â”‚   â”‚   â”œâ”€â”€ build_incident_dataset.py
+â”‚   â”‚   â””â”€â”€ load_postgres.py
+â”‚   â”‚
+â”‚   â””â”€â”€ modeling/
+â”‚       â”œâ”€â”€ evaluate_risk_model.py
+â”‚       â””â”€â”€ risk_model.py
+â”‚
+â”œâ”€â”€ app/
+â”œâ”€â”€ docs/
+â”œâ”€â”€ notebooks/
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
 Project Workflow
 
 The completed analytical workflow is:
 
 Service Incident Data
-        ↓
+        â†“
 PostgreSQL Data Foundation
-        ↓
+        â†“
 SQL Incident & Lifecycle Analysis
-        ↓
+        â†“
 Operational Complexity Analysis
-        ↓
+        â†“
 Resolution Outcome Analysis
-        ↓
+        â†“
 Symptom Risk Intelligence
-        ↓
+        â†“
 Combined Risk Intelligence
-        ↓
+        â†“
 Python Risk Modeling
-        ↓
+        â†“
 Leakage-Safe Intake Modeling
-        ↓
+        â†“
 Service Recovery Recommendations
-        ↓
+        â†“
 Power BI Executive Dashboard
 Key Analytical Findings
 
@@ -588,13 +598,13 @@ One of the key analytical improvements in this project was explicit leakage cont
 The modeling workflow distinguishes between:
 
 INTAKE-TIME INFORMATION
-        ↓
+        â†“
 EARLY RISK ASSESSMENT
 
 and:
 
 POST-INTAKE OPERATIONAL ACTIVITY
-        ↓
+        â†“
 OUTCOME / RETROSPECTIVE ANALYSIS
 
 Variables that depend on later incident activity were excluded from the leakage-safe intake model.
@@ -651,27 +661,27 @@ It combines:
 
 Data Engineering
 
-→ PostgreSQL schema and data preparation
+â†’ PostgreSQL schema and data preparation
 
 SQL Analytics
 
-→ lifecycle, complexity, resolution and risk analysis
+â†’ lifecycle, complexity, resolution and risk analysis
 
 Python
 
-→ ETL, feature preparation and modeling
+â†’ ETL, feature preparation and modeling
 
 Machine Learning
 
-→ baseline and leakage-safe risk prediction
+â†’ baseline and leakage-safe risk prediction
 
 Business Intelligence
 
-→ Power BI executive reporting
+â†’ Power BI executive reporting
 
 Decision Support
 
-→ service recovery recommendations
+â†’ service recovery recommendations
 
 The project therefore demonstrates more than dashboard creation; it shows how raw operational data can be transformed into analytical intelligence and actionable business recommendations.
 
@@ -695,3 +705,5 @@ Project 3
 AI Service Operations & Recovery Analytics
 
 Built as a professional portfolio project demonstrating SQL, Python, machine learning, operational analytics, Power BI, and business decision-support capabilities.
+
+
