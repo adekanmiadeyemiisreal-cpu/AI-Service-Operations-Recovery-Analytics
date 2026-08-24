@@ -27,3 +27,11 @@ Thumbs.db
 
 # Large/raw data protection
 data/raw/
+
+src/modeling/db_config.tmp
+
+# Large generated datasets
+data/processed/incident_events_clean.csv
+data/processed/incidents_analytics.csv
+data/powerbi/combined_risk_intelligence.csv
+data/powerbi/service_recovery_recommendations.csv
