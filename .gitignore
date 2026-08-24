@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Secrets
+*.env
+.env.*
+
+# PostgreSQL / local database files
+*.dump
+*.backup
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Power BI temporary/backup files
+*.pbit
+~$*.pbix
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Large/raw data protection
+data/raw/

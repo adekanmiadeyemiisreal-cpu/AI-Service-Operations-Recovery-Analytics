@@ -1,0 +1,4 @@
+complexity_band,incident_count,prolonged_incidents,prolonged_rate_pct
+High,267,259,97.00
+Medium,3869,1496,38.67
+Low,16633,322,1.94

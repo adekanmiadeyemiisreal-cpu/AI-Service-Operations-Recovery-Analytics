@@ -1,0 +1,5 @@
+combined_risk_band,prolonged_rate_pct
+Standard: Neither,3.20
+Elevated: Symptom only,12.05
+Elevated: Complexity only,54.61
+High: Complexity + Symptom,77.92

@@ -1,0 +1,82 @@
+PROJECT 3 - AI SERVICE OPERATIONS & RECOVERY ANALYTICS
+======================================================
+
+RISK MODEL EVALUATION
+=====================
+
+Rules-Based Complexity Baseline
+--------------------------------
+Rule:
+Complexity Score >= 20
+
+Precision:    60.46%
+Recall:       63.60%
+Specificity:  95.38%
+
+Interpretation:
+The explainable complexity rule identifies 63.60% of prolonged
+incidents while maintaining 95.38% specificity.
+
+
+Leakage-Contaminated ML Experiment
+-----------------------------------
+Precision:    56.53%
+Recall:       89.64%
+Specificity:  92.35%
+ROC-AUC:      0.9650
+
+Status:
+Development experiment only.
+
+Reason:
+The feature set included final operational counts and
+outcome-derived symptom risk features. These features are
+not valid for a true prospective prediction scenario.
+
+
+Leakage-Safe Intake ML Model
+----------------------------
+Precision:    24.04%
+Recall:       63.61%
+Specificity:  77.69%
+ROC-AUC:      0.7730
+
+Status:
+Valid predictive benchmark.
+
+Features:
+contact_type
+location
+category
+subcategory
+impact
+urgency
+priority
+assignment_group
+knowledge
+u_priority_confirmation
+notify
+vendor
+made_sla
+
+
+Business Interpretation
+-----------------------
+Intake-time attributes provide meaningful but limited predictive
+power for prolonged incident resolution.
+
+The leakage-safe model identifies approximately 64% of prolonged
+incidents at intake, but its low precision produces a relatively
+high number of false alerts.
+
+Operational complexity and behavior that develops during incident
+handling provide stronger retrospective risk signals.
+
+Therefore, the recommended architecture is a layered risk
+intelligence system:
+
+1. Intake-level early warning
+2. Operational complexity monitoring
+3. Symptom risk intelligence
+4. Combined risk escalation
+5. Service recovery recommendations

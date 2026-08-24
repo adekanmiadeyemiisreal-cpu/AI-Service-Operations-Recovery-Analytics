@@ -1,0 +1,5 @@
+combined_risk_band,recommended_priority,incident_count,prolonged_incidents,prolonged_rate_pct,pct_of_all_incidents,primary_recommendation,recommendation_reason
+High: Complexity + Symptom,1,548,427,77.92,2.64,Immediate escalation and senior ownership review,Both operational complexity and symptom risk are elevated
+Elevated: Symptom only,2,1825,220,12.05,8.79,Apply symptom-specific troubleshooting and knowledge guidance,The symptom pattern has elevated prolonged-resolution risk
+Elevated: Complexity only,2,1637,894,54.61,7.88,Review operational complexity and assignment ownership,Operational complexity is the dominant risk signal
+Standard: Neither,3,16756,536,3.20,80.69,Continue standard workflow with routine monitoring,No elevated complexity or symptom risk signal detected
