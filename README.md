@@ -71,8 +71,7 @@ The project was designed to:
 - Create reproducible SQL and Python analytical workflows
 
 ---
-$readme = Get-Content ".\README.md" -Raw
-$insert = @"
+
 # Dashboard Preview
 
 ### Executive Service Operations Dashboard
@@ -81,7 +80,7 @@ $insert = @"
 
 ---
 
-"@
+
 # Key Project KPIs
 
 | KPI | Result |
