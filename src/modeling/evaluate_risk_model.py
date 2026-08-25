@@ -1,3 +1,4 @@
+import os
 # ============================================================
 # PROJECT 3
 # AI SERVICE OPERATIONS & RECOVERY ANALYTICS
@@ -27,7 +28,7 @@ DB_CONFIG = {
     "host": "localhost",
     "database": "ai_service_operations",
     "user": "postgres",
-    "password": "1162",
+    "password": os.getenv("DB_PASSWORD"),
 }
 
 

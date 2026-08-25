@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import psycopg2
 
@@ -6,7 +7,7 @@ DB_CONFIG = {
     "host": "localhost",
     "database": "ai_service_operations",
     "user": "postgres",
-    "password": "1162",
+    "password": os.getenv("DB_PASSWORD"),
 }
 
 

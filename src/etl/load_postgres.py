@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import psycopg2
 from psycopg2.extras import execute_values
@@ -20,7 +21,7 @@ DB_CONFIG = {
     "port": 5432,
     "database": "ai_service_operations",
     "user": "postgres",
-    "password": "1162",
+    "password": os.getenv("DB_PASSWORD"),
 }
 
 
